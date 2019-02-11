@@ -1,7 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
+*{margin: 0; padding: 0}
+@function px($px) {
+  @return $px / $designWidth * 10 + rem;
 }
+
+$designWidth : 640;
 
 .child {
   background: #ddd;
@@ -13,9 +15,9 @@ body {
 
 .child {
   float: left;
-  width: 4rem;
-  height: 2rem;
-  margin: 0.5rem 0.5rem;
+  width: px(256);
+  height: px(128);
+  margin: px(32) px(32);
   font-size: 1.2em;
 }
 
@@ -24,4 +26,3 @@ body {
   display: block;
   clear: both;
 }
-/*# sourceMappingURL=zoom.css.map */
